@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Questions</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	
+  </head>
+  <body>
+    <main class="questions">
+        <h1>
+            Questions
+        </h1>
+        <h2>Question 3.1</h2>
+        <p>
+            <b>
+                Explain the differences between the methods of populating data in basic.html and advanced.html. In your opinion, which one is the better method? Justify your answers.
+            </b>
+        </p>
+        <p>
+            Both have advantages and disadvantages. In basic.html we supply a preprocessed list from the CSV to a HTML template. 
+            This has the advantage of being relatively simple, but the disadvantage is that it is not very powerful for easy 
+            customisation. In advanced.html we use an extra library, D3, to open up the CSV, create the table within D3 JavaScript
+             and add the data in to that at a higher level of abstraction. It has the advantage of being much more powerful in 
+             creating more advanced visualisations quickly but at the potential cost of needing to learn D3 specific syntax and
+              being potentially slower in creating simpler data displays. Using D3 also means other developers may need to learn
+               the syntax to work on the project in the future, but at the same time it provides developers with a common framework
+                to understand data visualisations, so they are less likely to confused by esoteric custom code written by a developer
+                 in vanilla JavaScript. In my opinion D3 is better of the two in this case as it quickly allowed for us to add a 
+                 sorting function to the table, a common user requirement for any tabulated data.
+        </p>
+        <h2>Question 3.1</h2>
+        <p>
+            <b>
+                Briefly describe the visualisation which you have done in creative.html. Specifically, explain:
+            </b>
+        </p>
+        <ul>
+            <li><b>Why do you use this visualisation technique?</b></li>
+            <li><b>What is the insight which you have gained from this visualisation?</b></li>
+        </ul>
+        <p>
+            I used this visualisation technique in order to help the audience visualise the proportions of sentiment when broken down.
+            Viewing data in table format is good for ordering and searching for single lines but fails to easily give an overview of how many of what fall into which category, unlike the pie chart.
+            Here we can easily see which airlines make up the favorable or unfavorable sentiment when compared to other airlines.
+            An improvement to the visualisation would be to refine the color palette scheme and make sure it is optimized for distinction to the human eye and color blind people (as well as looking prettier).
+            One draw back of these pie charts is it does not give the audience an idea of an individuals positive, neutral and negative sentiment;
+ for that we would need a pie chart per airline with three slices for sentiment. 
+        </p>
+        <h2>Question 3.3</h2>
+        <p>
+            <b>
+                What are the things which you have considered when designing the two test cases in Task 2?
+            </b>
+        </p>
+        <p>First I wanted to test as many edge cases as possible, this included: positive negative and 0 value numbers. There was also the possibility that the babble
+            sort function might be used to sort strings rather than numbers by future programmers, so we make sure it works for that as well.
+            I made sure that the same number was in multiple times as we as next to one another and apart to make sure no problems come up due to 
+            weird sequencing. For the string ordering I included both capital and lowercase letters, as the ordering is not necessarily the same.
+            I also sanity checked the length of the tweet data as that was a requirement in the assignment. You can imagine a scenario in 
+            a real project where adding this test in would be good for future regression tests when breaking changes may be made. 
+        </p>
+    </main>
+    
+
+  </body>
+</html>

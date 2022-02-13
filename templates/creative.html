@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Twitter US Airline Sentiment - Creative</title>
+	<link href="/static/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v4.js"></script>
+  </head>
+  <body>
+      <main>
+        <div id="page-wrap">
+        <h1>
+            Twitter US Airline Sentiment  Pie chart (using D3.js)
+          </h1>
+          <div>
+              <p>Choose the category you wish to visualise</p>
+              <select id="pie-select" name="pie-select">     
+                  <option selected="selected" value="neg-airline">Postive sentiment by airline</option>
+                  <option value="neut-airline">Neutral sentiment by airline</option>
+                  <option value="pos-airline">Negative sentiment by airline</option>
+                  <option value="neg-reason">Negative sentiment reason</option>
+              </select>
+          </div>
+      
+      
+      </main>
+    
+
+    
+   
+
+    <script src="/static/js/remove_polyfill.js"></script>
+    <script src="/static/js/pie.js"></script>
+
+    </div>
+
+  </body>
+</html>

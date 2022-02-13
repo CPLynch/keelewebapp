@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 80%;
+    margin: 0 auto 0 auto;
+  
+}
+
+main {
+   margin-top: 50px;
+   margin-bottom: 50px;
+}
+
+.home  h1  {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.home h2, .home p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.questions h2 {
+    margin-top: 26px;
+}
+
+
+#page-wrap {
+    margin: 50px;
+}
+
+p {
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+	background: #eee;
+}
+
+th {
+	background: #333;
+	color: white;
+	font-weight: bold;
+	cursor: s-resize;
+	background-repeat: no-repeat;
+       background-position: 3% center;
+}
+
+td, th {
+	padding: 6px;
+	border: 1px solid #ccc;
+	text-align: left;
+}
+	
+th.des:after {
+    content: "\21E9";
+}
+    
+th.aes:after {
+    content: "\21E7";
+}
+
+select {
+    padding: 10px 3px 10px 3px;
+}
