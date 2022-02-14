@@ -21,5 +21,3 @@ def display_creative():
 @app.route('/questions')
 def display_questions():
     return render_template("questions.html")
-
-app.run(host='0.0.0.0', port=81)
