@@ -19,15 +19,18 @@
             </b>
         </p>
         <p>
-            Both have advantages and disadvantages. In basic.html we supply a preprocessed list from the CSV to a HTML template. 
+            Both have advantages and disadvantages. In basic.html we supply a pre-processed list from the CSV to an HTML template. 
             This has the advantage of being relatively simple, but the disadvantage is that it is not very powerful for easy 
             customisation. In advanced.html we use an extra library, D3, to open up the CSV, create the table within D3 JavaScript
-             and add the data in to that at a higher level of abstraction. It has the advantage of being much more powerful in 
+             and add the data into that at a higher level of abstraction. It has the advantage of being much more powerful in 
              creating more advanced visualisations quickly but at the potential cost of needing to learn D3 specific syntax and
               being potentially slower in creating simpler data displays. Using D3 also means other developers may need to learn
                the syntax to work on the project in the future, but at the same time it provides developers with a common framework
-                to understand data visualisations, so they are less likely to confused by esoteric custom code written by a developer
-                 in vanilla JavaScript. In my opinion D3 is better of the two in this case as it quickly allowed for us to add a 
+                to understand data visualisations, so they are less likely to be confused by esoteric custom code written by a developer
+                 in vanilla JavaScript. Using an opinionated framework will generate code less likely to have bugs as there is both a standard way to code
+                 and the framework/library developers will have fixed many of the edge case bugs you do not know about for you (Flewitt, 2020). Furthermore, D3 may have 
+                speed optimisations built into it that would just not be economical to recreate as a single developer. 
+                In conclusion, in my opinion, D3 is the better of the two in this case as it quickly allowed for us to add a 
                  sorting function to the table, a common user requirement for any tabulated data.
         </p>
         <h2>Question 3.1</h2>
@@ -41,12 +44,16 @@
             <li><b>What is the insight which you have gained from this visualisation?</b></li>
         </ul>
         <p>
-            I used this visualisation technique in order to help the audience visualise the proportions of sentiment when broken down.
-            Viewing data in table format is good for ordering and searching for single lines but fails to easily give an overview of how many of what fall into which category, unlike the pie chart.
-            Here we can easily see which airlines make up the favorable or unfavorable sentiment when compared to other airlines.
-            An improvement to the visualisation would be to refine the color palette scheme and make sure it is optimized for distinction to the human eye and color blind people (as well as looking prettier).
-            One draw back of these pie charts is it does not give the audience an idea of an individuals positive, neutral and negative sentiment;
- for that we would need a pie chart per airline with three slices for sentiment. 
+            I used this visualisation representation of a pie chart to help the audience visualise the proportions of sentiment when broken down.
+            Viewing data in table format is good for ordering and searching for single lines but fails to easily give an overview of how many of what falls into which category, unlike the pie chart.
+            Here we can easily see which airlines make up the favourable or unfavourable sentiment when compared to other airlines. Pie charts easily show the mass of the whole when compared to bar charts.
+            However, it may not be optimal to use a pie chart here as pie charts as some studies have shown that pie charts take longer for the audience to determine the relative size when
+            compared to other visualization methods, as humans are not very good at perceiving circular area and so inaccurately see the proportions visually, better examples may be stacked bar charts (Siirtola, 2019).
+           
+            One drawback of these pie charts is it does not give the audience an idea of an individual airline positive, neutral and negative sentiment;
+            for that, we would need a pie chart per airline with three slices for sentiment. An improvement to the visualisation would be to refine the presentation colour palette scheme and make sure it is optimized for 
+            distinction to the human eye and for the 5% of humans (8 - 10% of men) with some sort of colour blindness. As the data is categorical I have made sure the colours are maximally differentiable within the colour space,
+            despite the numbers of categories in the chart being dynamic (Hehman and Xie, 2021).
         </p>
         <h2>Question 3.3</h2>
         <p>
@@ -54,12 +61,26 @@
                 What are the things which you have considered when designing the two test cases in Task 2?
             </b>
         </p>
-        <p>First I wanted to test as many edge cases as possible, this included: positive negative and 0 value numbers. There was also the possibility that the babble
+        <p>Firstly, I wanted to test as many edge cases as possible, this included: positive negative and 0 value numbers. There was also the possibility that the babble
             sort function might be used to sort strings rather than numbers by future programmers, so we make sure it works for that as well.
             I made sure that the same number was in multiple times as we as next to one another and apart to make sure no problems come up due to 
-            weird sequencing. For the string ordering I included both capital and lowercase letters, as the ordering is not necessarily the same.
-            I also sanity checked the length of the tweet data as that was a requirement in the assignment. You can imagine a scenario in 
-            a real project where adding this test in would be good for future regression tests when breaking changes may be made. 
+            weird sequencing. For the string order, I included both capital and lowercase letters, as the ordering is not necessarily the same.
+            I also sanity-checked the length of the tweet data as that was a requirement in the assignment. You can imagine a scenario in 
+            a real project where adding this test would be good for future regression tests when breaking changes may be made. I named my tests in a way that makes them 
+            self-explanatory, this way the code acts as self-documentation (John Reese, 2021). I also avoided putting any logic in my tests (conditionals, loops functions), this avoids introducing any bugs into the tests themselves.
+        </p>
+        <h2>References</h2>
+        <p>
+            Flewitt, N. (2020). Pros and cons of Frameworks in web development | nerd.vision. [online] www.nerd.vision. Available at: https://www.nerd.vision/post/pros-and-cons-of-frameworks-in-web-development.
+        </p>
+        <p>
+            Siirtola, H. (2019). The Cost of Pie Charts. [online] IEEE Xplore. Available at: https://ieeexplore.ieee.org/abstract/document/8812005 [Accessed 31 Mar. 2021].
+        </p>
+        <p>
+            Hehman, E. and Xie, S.Y. (2021). Doing Better Data Visualization. Advances in Methods and Practices in Psychological Science, 4(4), p.251524592110453.
+        </p>
+        <p>
+            John Reese (2021). Best practices for writing unit tests - .NET Core. [online] docs.microsoft.com. Available at: https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices.
         </p>
     </main>
     
